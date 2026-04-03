@@ -1,0 +1,11 @@
+{
+  "name": "@repo/data",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@repo/domain": "workspace:*"
+  }
+}

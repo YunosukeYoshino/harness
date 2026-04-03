@@ -1,0 +1,20 @@
+{
+  "protected": [
+    "package.json",
+    "pnpm-workspace.yaml",
+    "tsconfig.base.json",
+    "biome.json",
+    "pyproject.toml",
+    "lefthook.yml",
+    ".claude/settings.json",
+    "config/architecture-boundaries.json",
+    "config/root-hygiene.json",
+    "config/doc-freshness.json",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "docs/architecture/system-overview.md",
+    "docs/architecture/boundaries.md",
+    "docs/architecture/adr/*.md",
+    "work/README.md"
+  ]
+}

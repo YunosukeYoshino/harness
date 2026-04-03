@@ -1,0 +1,42 @@
+name: ci
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Enable corepack
+        run: corepack enable
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile=false
+
+      - name: Install Playwright browser
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Quick checks
+        run: pnpm quick-check
+
+      - name: Security checks
+        run: pnpm check:security
+
+      - name: Harness state
+        run: pnpm check:harness
+
+      - name: Runtime smoke
+        run: pnpm check:runtime
+
+      - name: Playwright smoke
+        run: pnpm test:smoke

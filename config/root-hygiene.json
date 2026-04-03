@@ -1,0 +1,10 @@
+{
+  "allowed_root_markdown": [
+    "README.md",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "SECURITY.md",
+    "CONTRIBUTING.md",
+    "LICENSE"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@repo/ui",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.tsx"
+  },
+  "dependencies": {
+    "react": "latest",
+    "react-dom": "latest",
+    "@repo/shared": "workspace:*"
+  }
+}

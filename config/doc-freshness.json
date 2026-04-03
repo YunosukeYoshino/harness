@@ -1,0 +1,4 @@
+{
+  "globs": ["docs/**/*.md"],
+  "required_frontmatter_keys": ["title", "last-reviewed"]
+}

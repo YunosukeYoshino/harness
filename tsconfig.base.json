@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "allowJs": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "verbatimModuleSyntax": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["node"],
+    "paths": {
+      "@repo/domain": ["./packages/domain/src/index.ts"],
+      "@repo/app": ["./packages/app/src/index.ts"],
+      "@repo/data": ["./packages/data/src/index.ts"],
+      "@repo/integrations": ["./packages/integrations/src/index.ts"],
+      "@repo/ui": ["./packages/ui/src/index.tsx"],
+      "@repo/shared": ["./packages/shared/src/index.ts"],
+      "@repo/schema": ["./packages/schema/src/index.ts"]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "web": ["ui", "shared", "schema", "domain"],
+  "api": ["app", "domain", "shared", "schema", "data", "integrations"],
+  "domain": ["shared", "schema"],
+  "app": ["domain", "shared", "schema"],
+  "data": ["domain", "shared", "schema"],
+  "integrations": ["domain", "shared", "schema"],
+  "ui": ["shared", "schema"],
+  "shared": [],
+  "schema": []
+}
