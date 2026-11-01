@@ -10,6 +10,8 @@
       "!playwright-report",
       "!test-results",
       "!work/**/archive",
+      "!**/__pycache__",
+      "!**/.pytest_cache",
       "!.agents/skills"
     ]
   },
