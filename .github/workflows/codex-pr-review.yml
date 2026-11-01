@@ -40,7 +40,7 @@ jobs:
     if: needs.codex.outputs.final_message != ''
     steps:
       - name: Post Codex feedback
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           github-token: ${{ github.token }}
           script: |
