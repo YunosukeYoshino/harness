@@ -46,7 +46,7 @@
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
-    "concurrently": "^9.2.1",
+    "concurrently": "^10.0.6",
     "dependency-cruiser": "^17.3.10",
     "lefthook": "latest",
     "playwright": "latest",
