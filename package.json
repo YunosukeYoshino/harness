@@ -41,7 +41,7 @@
     "@playwright/test": "latest",
     "@react-router/dev": "latest",
     "@secretlint/core": "13.1.0",
-    "@secretlint/secretlint-rule-preset-recommend": "11.4.1",
+    "@secretlint/secretlint-rule-preset-recommend": "13.1.0",
     "@tailwindcss/vite": "latest",
     "@types/node": "latest",
     "@types/react": "latest",
