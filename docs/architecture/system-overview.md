@@ -1,8 +1,8 @@
 ---
+
 title: System overview
 last-reviewed: 2026-03-26
 ---
-
 
 # Overview
 
@@ -31,4 +31,3 @@ last-reviewed: 2026-03-26
 - `api` は `app` / `domain` / `shared` / `schema` / `data` / `integrations` を読める
 
 詳細は `docs/architecture/boundaries.md` と `config/architecture-boundaries.json`
-

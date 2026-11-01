@@ -1,4 +1,5 @@
 ---
+
 title: Context Window Management Strategy
 last-reviewed: 2026-03-29
 ---
@@ -24,14 +25,14 @@ orchestrator
 
 ## Context Budget Per Agent
 
-| Agent | Expected Context | Strategy |
-|-------|-----------------|----------|
-| planner | Plan + codebase structure | Read repo-map.md, not full source |
-| tdd-driver | Test file + implementation file + plan steps | 2-3 files max per cycle |
-| code-reviewer | Changed files + architecture boundaries | git diff + boundaries.json |
-| security-reviewer | Changed files + security policy | git diff + security-engineering.md |
-| ui-browser-evaluator | Routes + screenshots | Route list + browser output only |
-| docs-maintainer | Changed docs + repo-map | Focused diff, not full docs/ |
+| Agent                | Expected Context                             | Strategy                           |
+| -------------------- | -------------------------------------------- | ---------------------------------- |
+| planner              | Plan + codebase structure                    | Read repo-map.md, not full source  |
+| tdd-driver           | Test file + implementation file + plan steps | 2-3 files max per cycle            |
+| code-reviewer        | Changed files + architecture boundaries      | git diff + boundaries.json         |
+| security-reviewer    | Changed files + security policy              | git diff + security-engineering.md |
+| ui-browser-evaluator | Routes + screenshots                         | Route list + browser output only   |
+| docs-maintainer      | Changed docs + repo-map                      | Focused diff, not full docs/       |
 
 ## Checkpoint Strategy
 

@@ -1,10 +1,12 @@
 ---
+
 name: task-issue-creator
 description: Split large tasks into issues along DDD layer boundaries. Each issue is independently implementable and testable.
 tools: Read, Grep, Glob, Bash, Edit, Write, MultiEdit, Skill
 skills:
-  - repo-guardrails
-effort: high
+- repo-guardrails
+  effort: high
+
 ---
 
 Review actual files before concluding.

@@ -1,11 +1,13 @@
 ---
+
 name: ui-browser-evaluator
 description: Run browser-level smoke and exploratory checks using Playwright or agent-browser when available.
 tools: Read, Grep, Glob, Bash, Edit, Write, MultiEdit, Skill
 skills:
-  - ui-evaluation
-  - repo-guardrails
-effort: high
+- ui-evaluation
+- repo-guardrails
+  effort: high
+
 ---
 
 Review actual files before concluding.
@@ -91,10 +93,10 @@ Write results to `work/qa-reports/active/{slug}-browser.md`:
 
 ## Pages Verified
 
-| Route | Status | Console Errors | Screenshot |
-|-------|--------|---------------|------------|
-| / | PASS/FAIL | 0 | screenshots/index.png |
-| /projects/BLG | PASS/FAIL | 0 | screenshots/projects-blg.png |
+| Route         | Status    | Console Errors | Screenshot                   |
+| ------------- | --------- | -------------- | ---------------------------- |
+| /             | PASS/FAIL | 0              | screenshots/index.png        |
+| /projects/BLG | PASS/FAIL | 0              | screenshots/projects-blg.png |
 
 ## Findings
 
@@ -102,16 +104,16 @@ Write results to `work/qa-reports/active/{slug}-browser.md`:
 
 ## Design Quality
 
-| Check | Status | Notes |
-|-------|--------|-------|
-| Layout consistency | PASS/WARN/FAIL | {details} |
-| Responsive (375px) | PASS/WARN/FAIL | {details} |
-| Responsive (768px) | PASS/WARN/FAIL | {details} |
-| Responsive (1280px) | PASS/WARN/FAIL | {details} |
-| Color contrast | PASS/WARN/FAIL | {details} |
+| Check                | Status         | Notes     |
+| -------------------- | -------------- | --------- |
+| Layout consistency   | PASS/WARN/FAIL | {details} |
+| Responsive (375px)   | PASS/WARN/FAIL | {details} |
+| Responsive (768px)   | PASS/WARN/FAIL | {details} |
+| Responsive (1280px)  | PASS/WARN/FAIL | {details} |
+| Color contrast       | PASS/WARN/FAIL | {details} |
 | Typography hierarchy | PASS/WARN/FAIL | {details} |
-| Interactive states | PASS/WARN/FAIL | {details} |
-| Empty states | PASS/WARN/FAIL | {details} |
+| Interactive states   | PASS/WARN/FAIL | {details} |
+| Empty states         | PASS/WARN/FAIL | {details} |
 
 ## Verdict: PASS / FAIL
 ```

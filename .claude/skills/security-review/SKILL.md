@@ -1,4 +1,5 @@
 ---
+
 name: security-review
 description: Review for secret leaks, auth regressions, unsafe execution, and PII logging.
 disable-model-invocation: true

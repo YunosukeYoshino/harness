@@ -1,9 +1,9 @@
 ---
+
 title: Repository structure
 last-reviewed: 2026-03-26
 last-validated: 2026-03-30
 ---
-
 
 # Structure
 

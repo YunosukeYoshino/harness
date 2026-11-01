@@ -12,16 +12,16 @@ Just as a horse harness converts raw power into useful work, this template conve
 
 ### What you get
 
-| Layer | What | Why |
-|-------|------|-----|
-| **Runtime app** | React Router v7 + Hono API + 7 clean-architecture packages | Real app shell, not a toy |
-| **5 hooks** | PreToolUse / PostToolUse / Stop | Mechanical enforcement -- lint, typecheck, E2E run on every edit |
-| **11 agents** | orchestrator, planner, tdd-driver, 3 reviewers, security, UI, docs, progress, task-issue | Specialized delegation, not monolithic prompts |
-| **9 skills** | spec-first, dev, review, PR, fix-PR, TDD, security, UI evaluation, guardrails | Reusable workflows invoked on demand |
-| **7 custom validators** | architecture boundaries, root hygiene, doc freshness, route coverage, no-skip, agent defs, harness state | Beyond standard linting |
-| **Work artifact system** | specs / plans / sprint-contracts / reviews / QA / progress / handoffs | Structured lifecycle tracking |
-| **CI + Codex review** | GitHub Actions + automated PR review | No human review bottleneck |
-| **Session forensics** | Hook firing logs, agent invocation tracking, stop-time verification | Prove compliance, not just claim it |
+| Layer                    | What                                                                                                     | Why                                                              |
+| ------------------------ | -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| **Runtime app**          | React Router v7 + Hono API + 7 clean-architecture packages                                               | Real app shell, not a toy                                        |
+| **5 hooks**              | PreToolUse / PostToolUse / Stop                                                                          | Mechanical enforcement -- lint, typecheck, E2E run on every edit |
+| **11 agents**            | orchestrator, planner, tdd-driver, 3 reviewers, security, UI, docs, progress, task-issue                 | Specialized delegation, not monolithic prompts                   |
+| **9 skills**             | spec-first, dev, review, PR, fix-PR, TDD, security, UI evaluation, guardrails                            | Reusable workflows invoked on demand                             |
+| **7 custom validators**  | architecture boundaries, root hygiene, doc freshness, route coverage, no-skip, agent defs, harness state | Beyond standard linting                                          |
+| **Work artifact system** | specs / plans / sprint-contracts / reviews / QA / progress / handoffs                                    | Structured lifecycle tracking                                    |
+| **CI + Codex review**    | GitHub Actions + automated PR review                                                                     | No human review bottleneck                                       |
+| **Session forensics**    | Hook firing logs, agent invocation tracking, stop-time verification                                      | Prove compliance, not just claim it                              |
 
 ### Architecture
 
@@ -81,14 +81,14 @@ pnpm new:work-item my-feature   # scaffold all work artifacts
 
 ### Key commands
 
-| Command | What it does |
-|---------|-------------|
-| `pnpm dev` | Start web + API in dev mode |
-| `pnpm quick-check` | Fast gate: lint, typecheck, boundaries, validators (~30s) |
-| `pnpm check` | Full gate: quick-check + security + harness state + smoke + E2E |
-| `pnpm test:smoke` | Playwright E2E only |
-| `pnpm new:work-item <slug>` | Scaffold all work artifacts for a new task |
-| `bash tools/install-upstream-skills.sh` | Add React Router / Hono / shadcn skills |
+| Command                                 | What it does                                                    |
+| --------------------------------------- | --------------------------------------------------------------- |
+| `pnpm dev`                              | Start web + API in dev mode                                     |
+| `pnpm quick-check`                      | Fast gate: lint, typecheck, boundaries, validators (~30s)       |
+| `pnpm check`                            | Full gate: quick-check + security + harness state + smoke + E2E |
+| `pnpm test:smoke`                       | Playwright E2E only                                             |
+| `pnpm new:work-item <slug>`             | Scaffold all work artifacts for a new task                      |
+| `bash tools/install-upstream-skills.sh` | Add React Router / Hono / shadcn skills                         |
 
 ---
 

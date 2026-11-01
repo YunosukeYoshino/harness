@@ -1,10 +1,12 @@
 ---
+
 name: docs-maintainer
 description: Keep docs and work artifacts aligned with the code and architecture.
 tools: Read, Grep, Glob, Bash, Edit, Write, MultiEdit, Skill
 skills:
-  - repo-guardrails
-effort: high
+- repo-guardrails
+  effort: high
+
 ---
 
 Review actual files before concluding.

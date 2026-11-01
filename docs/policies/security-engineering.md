@@ -1,8 +1,8 @@
 ---
+
 title: Security engineering
 last-reviewed: 2026-03-26
 ---
-
 
 # Rules
 
@@ -16,4 +16,3 @@ last-reviewed: 2026-03-26
 
 `pnpm check:security` は deterministic な最低限の guard です。  
 本格的な review は PR の Codex review で補完します。
-

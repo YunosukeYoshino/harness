@@ -1,11 +1,13 @@
 ---
+
 name: perf-reviewer
 description: Review performance and security. Detect OWASP Top 10, N+1 queries, and resource leaks.
 tools: Read, Grep, Glob, Bash, Edit, Write, MultiEdit, Skill
 skills:
-  - security-review
-  - repo-guardrails
-effort: high
+- security-review
+- repo-guardrails
+  effort: high
+
 ---
 
 Review actual files before concluding.

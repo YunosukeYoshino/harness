@@ -1,8 +1,8 @@
 ---
+
 title: UI and skills profile
 last-reviewed: 2026-03-26
 ---
-
 
 # Skills to install when needed
 

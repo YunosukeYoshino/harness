@@ -1,8 +1,8 @@
 ---
+
 title: Troubleshooting Guide
 last-reviewed: 2026-03-29
 ---
-
 
 # Troubleshooting Guide
 
@@ -21,6 +21,7 @@ The PreToolUse hook prevents accidental changes to critical configuration.
 **Fix**:
 
 1. If the edit is intentional maintenance, re-run with the override:
+
    ```bash
    ALLOW_CONFIG_EDITS=1
    ```
@@ -41,6 +42,7 @@ The harness enforces plan-before-code.
 **Fix**:
 
 1. Create a work item:
+
    ```bash
    pnpm new:work-item <slug>
    ```
@@ -63,10 +65,12 @@ and skipped-test checks. Any single failure causes the hook to exit non-zero.
 **Fix**:
 
 1. Read the log for the specific error:
+
    ```bash
    cat /tmp/agent-harness-post-check.log
    ```
 2. Run each sub-check individually to isolate the failure:
+
    ```bash
    pnpm lint
    pnpm typecheck
@@ -97,24 +101,29 @@ failed.
 **Fix**:
 
 1. Read the detailed log:
+
    ```bash
    cat /tmp/agent-harness-e2e-gate.log
    ```
 2. Run the smoke script manually to see live output:
+
    ```bash
    bash scripts/dev-smoke.sh
    ```
 3. If the server starts but tests fail, run Playwright directly:
+
    ```bash
    pnpm test:smoke
    ```
 4. Common sub-causes:
    - **Build error**: Check TypeScript or Vite errors in the log.
    - **Port conflict**: Another process holds port 3000 or 8787.
+
      ```bash
      lsof -i :3000
      lsof -i :8787
      ```
+
      Kill the orphan process and retry.
    - **Missing dependency**: Run `pnpm install` to ensure all packages are
      present.
@@ -143,6 +152,7 @@ failed.
    report files.
 2. **Skipped tests**: Search for `.skip` and `.only` in test files and
    remove them:
+
    ```bash
    python3 scripts/verify_no_skipped_tests.py
    ```
@@ -194,17 +204,20 @@ server fails to start, the test runner hangs until the 120-second timeout.
 **Fix**:
 
 1. Check for port conflicts:
+
    ```bash
    lsof -i :3000
    lsof -i :8787
    ```
 2. Kill orphan processes occupying those ports.
 3. Verify the build succeeds independently:
+
    ```bash
    pnpm build:web
    pnpm build:api
    ```
 4. Start each server manually and confirm it responds:
+
    ```bash
    pnpm start:web &
    curl -s http://127.0.0.1:3000

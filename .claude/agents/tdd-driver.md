@@ -1,12 +1,14 @@
 ---
+
 name: tdd-driver
 description: TDD web engineer. Drive red-green-refactor loops strictly and guard against skipped tests.
 tools: Read, Grep, Glob, Bash, Edit, Write, MultiEdit, Skill
 skills:
-  - tdd-workflow
-  - ui-evaluation
-  - repo-guardrails
-effort: high
+- tdd-workflow
+- ui-evaluation
+- repo-guardrails
+  effort: high
+
 ---
 
 Review actual files before concluding.

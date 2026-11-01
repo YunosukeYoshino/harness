@@ -1,8 +1,8 @@
 ---
+
 title: Codex PR Review and Auto-Fix Loop
 last-reviewed: 2026-03-29
 ---
-
 
 # Codex PR Review and Auto-Fix Loop
 
@@ -40,9 +40,11 @@ Codex analyzes the diff and posts findings as a PR comment.
 The `/fix-pr` skill automates the fix cycle:
 
 1. **Gather findings**: Fetch Codex review comments via the GitHub API:
+
    ```bash
    gh api repos/{owner}/{repo}/pulls/{pr_number}/comments
    ```
+
    Also read any findings stored in `work/reviews/active/`.
 
 2. **Categorize**: Classify each finding by severity:
@@ -117,10 +119,10 @@ gh api repos/{owner}/{repo}/issues/{pr_number}/comments
 
 ### Related skills and agents
 
-| Skill/Agent | Purpose |
-|-------------|---------|
-| `/pr` | Create PR with quality gate verification |
-| `/fix-pr` | Iterative fix loop (max 3 retries) |
-| `/review` | 3-agent parallel review (code quality, performance, spec) |
+| Skill/Agent             | Purpose                                                            |
+| ----------------------- | ------------------------------------------------------------------ |
+| `/pr`                   | Create PR with quality gate verification                           |
+| `/fix-pr`               | Iterative fix loop (max 3 retries)                                 |
+| `/review`               | 3-agent parallel review (code quality, performance, spec)          |
 | `repo-guardrails` skill | Shared review guardrails for boundaries, artifacts, and docs drift |
-| `code-reviewer` agent | Code quality and security review |
+| `code-reviewer` agent   | Code quality and security review                                   |

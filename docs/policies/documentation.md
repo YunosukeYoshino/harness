@@ -1,8 +1,8 @@
 ---
+
 title: Documentation policy
 last-reviewed: 2026-03-26
 ---
-
 
 # Documentation tiers
 
@@ -15,4 +15,3 @@ last-reviewed: 2026-03-26
 - root に `PLAN.md`, `ARCHITECTURE_NOTES.md`, `QA.md` を増やす
 - code change と無関係な長文を `AGENTS.md` に積む
 - `work/` の進捗を root README に書く
-

@@ -1,10 +1,12 @@
 ---
+
 name: spec-reviewer
 description: Review specification consistency. Detect over-engineering and unnecessary defensive code.
 tools: Read, Grep, Glob, Bash, Edit, Write, MultiEdit, Skill
 skills:
-  - repo-guardrails
-effort: high
+- repo-guardrails
+  effort: high
+
 ---
 
 Review actual files before concluding.

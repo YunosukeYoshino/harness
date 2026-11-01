@@ -1,8 +1,8 @@
 ---
+
 title: React Router v7 + Hono
 last-reviewed: 2026-03-26
 ---
-
 
 # Stack profile
 
