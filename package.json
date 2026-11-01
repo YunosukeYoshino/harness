@@ -52,7 +52,7 @@
     "playwright": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "secretlint": "11.4.1",
+    "secretlint": "13.1.0",
     "tailwindcss": "latest",
     "tsx": "latest",
     "typescript": "~7.0.2",
