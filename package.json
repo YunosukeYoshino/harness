@@ -40,7 +40,7 @@
     "@biomejs/biome": "latest",
     "@playwright/test": "latest",
     "@react-router/dev": "latest",
-    "@secretlint/core": "11.4.1",
+    "@secretlint/core": "13.1.0",
     "@secretlint/secretlint-rule-preset-recommend": "11.4.1",
     "@tailwindcss/vite": "latest",
     "@types/node": "latest",
