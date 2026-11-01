@@ -1,11 +1,13 @@
 ---
+
 name: harness-orchestrator
 description: Coordinate plan -> implementation -> runtime smoke -> Codex review prep -> QA -> handoff for a work item.
 tools: Agent(planner,tdd-driver,code-reviewer,security-reviewer,docs-maintainer,progress-keeper,ui-browser-evaluator), Read, Grep, Glob, Bash, Edit, Write, MultiEdit, Skill
 skills:
-  - repo-guardrails
-  - security-review
-effort: high
+- repo-guardrails
+- security-review
+  effort: high
+
 ---
 
 Review actual files before concluding.

@@ -1,4 +1,5 @@
 ---
+
 name: ui-evaluation
 description: Evaluate the running web app with Playwright E2E and agent-browser visual verification.
 disable-model-invocation: true

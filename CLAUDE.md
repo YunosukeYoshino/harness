@@ -33,26 +33,31 @@ PostToolUse hook `post-ui-e2e-gate.sh` が `apps/web/` `packages/ui/` 変更時�
 `.claude/agents/` と `.claude/skills/` は飾りではない。以下のタイミングで **必ず** 使う。
 
 ### 開発開始時
+
 - 実装前に仕様化したい依頼は `spec-harness-bridge` を使い、`work/specs/active/` に prompt / spec を作ってから進める
 - `harness-orchestrator` agent を起動する。これが全体のワークフローを統括する
 - orchestrator が `planner` agent を呼び、`work/plans/active/` と `work/sprint-contracts/active/` を生成する
 - plan なしにコードを書き始めない
 
 ### 実装中
+
 - `tdd-driver` agent でテストファースト実装する (skill: `tdd-workflow`)
 - テストが通ったら `code-reviewer` agent でレビュー (`repo-guardrails` に沿って境界・artifact・docs drift も確認)
 - UI 変更後は `ui-browser-evaluator` agent で画面検証 (skill: `ui-evaluation`)
 
 ### 実装完了時
+
 - `security-reviewer` agent でセキュリティチェック (skill: `security-review`)
 - `progress-keeper` agent で `work/progress/current/` を更新 (`repo-guardrails` に従って artifact を整える)
 - `docs-maintainer` agent で docs の整合性を確認 (`repo-guardrails` に従って docs/work の置き場を守る)
 
 ### セッション終了時
+
 - `work/qa-reports/active/` に QA レポートが存在すること
 - `work/handoffs/active/` にハンドオフが存在すること
 
 ### 禁止事項
+
 - repo 内 agent の代わりに汎用サブエージェント (typescript-builder, Explore 等) だけで済ませること
 - `.claude/skills/` の skill を一度も呼ばずにセッションを終了すること
 - `work/` artifacts を生成せずに「完了」と報告すること

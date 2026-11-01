@@ -1,4 +1,5 @@
 ---
+
 title: Customizing the template
 last-reviewed: 2026-04-03
 ---
@@ -46,15 +47,15 @@ After editing, run `pnpm check:deps` to verify no violations.
 
 The template includes 7 packages under `packages/`:
 
-| Package | Purpose |
-|---------|---------|
-| `app` | Application services / use cases |
-| `data` | Data access / repositories |
-| `domain` | Domain models / business logic |
-| `integrations` | External service adapters |
-| `schema` | Shared schemas (Zod, etc.) |
-| `shared` | Utilities shared across all layers |
-| `ui` | UI components |
+| Package        | Purpose                            |
+| -------------- | ---------------------------------- |
+| `app`          | Application services / use cases   |
+| `data`         | Data access / repositories         |
+| `domain`       | Domain models / business logic     |
+| `integrations` | External service adapters          |
+| `schema`       | Shared schemas (Zod, etc.)         |
+| `shared`       | Utilities shared across all layers |
+| `ui`           | UI components                      |
 
 To add a package:
 1. Create `packages/<name>/` with `package.json` (name: `@repo/<name>`)
@@ -91,16 +92,19 @@ find apps packages -maxdepth 2 -type d
 ## Step 5: Configure quality gates
 
 ### Linting
+
 The template uses Biome. To switch to ESLint:
 1. Replace `biome.json` with `.eslintrc.*`
 2. Update `pnpm lint` in root `package.json`
 3. Update `scripts/quick-check.sh` if it references Biome directly
 
 ### Testing
+
 - E2E: `playwright.config.ts` -- update `baseURL`, browser list, test directories
 - Unit/Integration: add your test runner (Vitest, Jest) and update `pnpm test` script
 
 ### Custom validators
+
 Scripts in `scripts/` enforce project-specific rules:
 - `check_architecture.py` -- boundary validation
 - `verify_no_skipped_tests.py` -- no `.skip` / `.only`
@@ -112,16 +116,19 @@ Modify or remove validators that don't apply to your project.
 ## Step 6: Customize agents and skills
 
 ### Agents (`.claude/agents/`)
+
 - Keep `harness-orchestrator`, `planner`, `code-reviewer`, `progress-keeper` as-is
 - Modify `tdd-driver` if your test strategy differs
 - Add domain-specific agents for your project
 
 ### Skills (`.claude/skills/`)
+
 - `dev`, `review`, `pr`, `fix-pr` are generally reusable
 - Update `spec-harness-bridge` if your spec format differs
 - Add skills for your domain workflows
 
 ### Skill routing
+
 Update `.claude/skills/repo-guardrails/SKILL.md` and `docs/runbooks/skill-routing-prompts.md` to add routing for your custom skills.
 
 ## Step 7: Verify everything

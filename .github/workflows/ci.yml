@@ -20,6 +20,9 @@ jobs:
       - name: Enable corepack
         run: corepack enable
 
+      - name: Install Python test deps
+        run: python3 -m pip install pytest
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile=false
 

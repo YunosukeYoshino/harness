@@ -1,4 +1,5 @@
 ---
+
 name: review
 description: Repository review entrypoint for requests like レビューして, 監査して, 問題点を見て, 改善点を洗い出して. Runs parallel code, performance/security, and spec-consistency review, then consolidates actionable findings.
 user_invocable: true

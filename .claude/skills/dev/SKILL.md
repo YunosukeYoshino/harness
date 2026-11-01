@@ -1,4 +1,5 @@
 ---
+
 name: dev
 description: Repository development entrypoint for requests like 実装して, 追加して, 修正して, この repo で作って. Handles work artifacts, TDD, smoke/E2E verification, review, and handoff.
 user_facing: true

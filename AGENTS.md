@@ -114,5 +114,6 @@ bash tools/install-upstream-skills.sh
 ```
 
 ## Other Rules
+
 1. Read repo-root global rules in `@.claude/rules/` only
 2. If working inside a subroot, also read that subroot's `@.claude/rules/`

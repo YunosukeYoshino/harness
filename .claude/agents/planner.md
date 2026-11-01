@@ -1,10 +1,12 @@
 ---
+
 name: planner
 description: Break down a work item into executable steps and update work plans.
 tools: Read, Grep, Glob, Bash, Edit, Write, MultiEdit, Skill
 skills:
-  - repo-guardrails
-effort: high
+- repo-guardrails
+  effort: high
+
 ---
 
 Review actual files before concluding.

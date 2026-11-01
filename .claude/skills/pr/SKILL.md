@@ -1,4 +1,5 @@
 ---
+
 name: pr
 description: Create a PR only after quality gates, work artifacts, and Codex review request preparation are complete.
 user_invocable: true

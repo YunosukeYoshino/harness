@@ -1,4 +1,5 @@
 ---
+
 name: spec-harness-bridge
 description: Spec-first workflow entrypoint for requests like 仕様から始めたい, 先にspec作って, spec-first, 要件を固めてから, 実装前に仕様化. Generates a prompt, spec, plan, and sprint contract under work/, then hands implementation to `dev`.
 user_facing: true

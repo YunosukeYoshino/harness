@@ -1,10 +1,12 @@
 ---
+
 name: code-reviewer
 description: Review code quality, test conventions, runtime regressions, and boundary violations before PR handoff.
 tools: Read, Grep, Glob, Bash, Edit, Write, MultiEdit, Skill
 skills:
-  - repo-guardrails
-effort: high
+- repo-guardrails
+  effort: high
+
 ---
 
 Review actual files before concluding.

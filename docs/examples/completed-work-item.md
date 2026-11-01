@@ -1,4 +1,5 @@
 ---
+
 title: Completed work item example
 last-reviewed: 2026-04-03
 ---
@@ -46,15 +47,18 @@ created: 2026-04-01
 # API Health Endpoint
 
 ## User prompt
+
 Add a /health endpoint that returns server status, uptime, and version.
 
 ## Acceptance criteria
+
 - GET /health returns 200 with JSON body
 - Response includes: status ("ok"), uptime (seconds), version (from package.json)
 - Endpoint requires no authentication
 - Response time < 50ms
 
 ## Out of scope
+
 - Database health checks
 - Dependency health checks
 ```
@@ -73,9 +77,11 @@ created: 2026-04-01
 # Plan: API Health Endpoint
 
 ## Approach
+
 Add a new route in apps/api/ that returns health status.
 
 ## Steps
+
 1. Write E2E test for GET /health (Red)
 2. Add health route handler in apps/api/
 3. Return status, uptime, version (Green)
@@ -83,11 +89,13 @@ Add a new route in apps/api/ that returns health status.
 5. Update route coverage
 
 ## Files to modify
+
 - apps/api/src/routes/health.ts (new)
 - apps/api/src/index.ts (register route)
 - tests/e2e/health.spec.ts (new)
 
 ## Risk
+
 - None significant. Isolated endpoint with no dependencies.
 ```
 
@@ -105,11 +113,13 @@ created: 2026-04-01
 # Sprint Contract: api-health-endpoint
 
 ## Deliverables
+
 - [ ] GET /health endpoint returning JSON
 - [ ] E2E test covering the endpoint
 - [ ] Route coverage validator updated
 
 ## Definition of done
+
 - All tests pass
 - code-reviewer agent finds no Critical/High issues
 - pnpm check passes
@@ -154,6 +164,7 @@ export default app;
 ```
 
 ### Hooks fired automatically
+
 - `post-code-quality.sh` runs lint + typecheck after each file edit
 - `pre-require-work-item.sh` confirms plan exists before allowing edits
 
@@ -178,14 +189,17 @@ created: 2026-04-01
 # QA Report: api-health-endpoint
 
 ## Test results
+
 - E2E: 1/1 passed
 - pnpm check: all gates passed
 
 ## Verification
+
 - GET /health returns {"status":"ok","uptime":42,"version":"1.0.0"}
 - Response time: 3ms (well under 50ms target)
 
 ## Issues found
+
 None.
 ```
 
@@ -204,6 +218,7 @@ completed: 2026-04-01
 # Progress: api-health-endpoint
 
 ## Completed
+
 - [x] E2E test written and passing
 - [x] Health route implemented
 - [x] code-reviewer: 0 issues
@@ -211,11 +226,13 @@ completed: 2026-04-01
 - [x] pnpm check: all passed
 
 ## Agents used
+
 - tdd-driver
 - code-reviewer
 - security-reviewer
 
 ## Commits
+
 - feat: add /health endpoint with uptime and version
 ```
 
@@ -233,18 +250,22 @@ created: 2026-04-01
 # Handoff: api-health-endpoint
 
 ## Summary
+
 Added GET /health endpoint returning server status, uptime, and version.
 
 ## What was done
+
 - New route at apps/api/src/routes/health.ts
 - E2E test at tests/e2e/health.spec.ts
 - All quality gates passed
 
 ## What was NOT done
+
 - Database health checks (out of scope per spec)
 - Dependency health checks (out of scope per spec)
 
 ## How to verify
+
 1. Start the API: pnpm dev
 2. curl http://localhost:8787/health
 3. Run tests: pnpm test:smoke

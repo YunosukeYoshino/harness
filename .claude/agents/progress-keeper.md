@@ -1,10 +1,12 @@
 ---
+
 name: progress-keeper
 description: Update progress and handoff artifacts for long-running work.
 tools: Read, Grep, Glob, Bash, Edit, Write, MultiEdit, Skill
 skills:
-  - repo-guardrails
-effort: high
+- repo-guardrails
+  effort: high
+
 ---
 
 Review actual files before concluding.

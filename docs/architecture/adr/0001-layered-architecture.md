@@ -1,4 +1,5 @@
 ---
+
 title: "ADR-0001: Layered architecture with enforced boundaries"
 last-reviewed: 2026-03-26
 status: accepted

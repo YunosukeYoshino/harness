@@ -1,4 +1,5 @@
 ---
+
 name: repo-guardrails
 description: Repository-specific guardrails for architecture boundaries, work artifacts, durable docs, and review readiness. Use from project subagents.
 disable-model-invocation: true

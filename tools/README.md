@@ -21,15 +21,15 @@ bash tools/install-upstream-skills.sh --help
 
 **Included skills:**
 
-| Skill | Purpose |
-|-------|---------|
+| Skill                       | Purpose                                                       |
+| --------------------------- | ------------------------------------------------------------- |
 | react-router-framework-mode | React Router framework mode (loaders, actions, route modules) |
-| hono | Hono HTTP framework |
-| shadcn | shadcn/ui component generation |
-| ai-elements | Vercel AI Elements |
-| prisma-client-api | Prisma Client API |
-| agent-browser | agent-browser visual verification |
-| design-taste-frontend | Taste Skill frontend design guidance |
+| hono                        | Hono HTTP framework                                           |
+| shadcn                      | shadcn/ui component generation                                |
+| ai-elements                 | Vercel AI Elements                                            |
+| prisma-client-api           | Prisma Client API                                             |
+| agent-browser               | agent-browser visual verification                             |
+| design-taste-frontend       | Taste Skill frontend design guidance                          |
 
 Installed skills are managed project-locally by `npx skills add`, with package
 content under `.agents/skills/`. The installer rewrites each corresponding

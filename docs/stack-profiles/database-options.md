@@ -1,8 +1,8 @@
 ---
+
 title: Database options
 last-reviewed: 2026-03-26
 ---
-
 
 # Database options
 
@@ -15,4 +15,3 @@ last-reviewed: 2026-03-26
 
 - hosted Postgres + auth + storage が必要なら Supabase
 - skills を入れて schema / RLS / migration の指示精度を上げる
-

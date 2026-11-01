@@ -1,8 +1,8 @@
 ---
+
 title: Post-Incident Rule Creation Process
 last-reviewed: 2026-03-29
 ---
-
 
 # Post-Incident Rule Creation Process
 
@@ -36,12 +36,12 @@ Determine the nature of the mistake:
 
 Choose the appropriate enforcement mechanism based on how strictly the rule must be applied:
 
-| Enforcement | When to use | Location |
-|---|---|---|
-| Linter / verification script | Can be caught by static analysis or a script | `scripts/` |
-| PreToolUse hook | Must block tool execution before it happens | `.claude/hooks/` |
-| PostToolUse hook | Needs a check after execution completes | `.claude/hooks/` |
-| Rule (guidance) | Is advice, not a hard block | `.claude/rules/learned/` |
+| Enforcement                  | When to use                                  | Location                 |
+| ---------------------------- | -------------------------------------------- | ------------------------ |
+| Linter / verification script | Can be caught by static analysis or a script | `scripts/`               |
+| PreToolUse hook              | Must block tool execution before it happens  | `.claude/hooks/`         |
+| PostToolUse hook             | Needs a check after execution completes      | `.claude/hooks/`         |
+| Rule (guidance)              | Is advice, not a hard block                  | `.claude/rules/learned/` |
 
 ### 4. Implement
 
